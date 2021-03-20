@@ -1,16 +1,17 @@
 import React, {useState} from 'react'
-import { GoogleMap, useLoadScript, Marker, InfoWindow } from '@react-google-maps/api'
+import scriptLoader from 'react-async-script-loader'
+import { GoogleMap, Marker } from '@react-google-maps/api'
 import { Container } from '@material-ui/core'
 
 import stylesMap from './stylesMap'
 
-const libraries = ['places']
 const mapContainerStyle = {width: '75vw', height: '45vh'}
 const center = { lat: 20.695595, lng: -100.445277}
 const options = {styles: stylesMap, disableDefaultUI: false}
 
-const Map = ({marker, setMarker})=>{
+const Map = ({marker, setMarker, isScriptLoaded, isScriptLoadSucceed})=>{
 
+    if(isScriptLoaded && isScriptLoadSucceed){
     return(
         <Container style={{padding: '3%'}}>
             <GoogleMap 
@@ -26,7 +27,7 @@ const Map = ({marker, setMarker})=>{
 
             </GoogleMap>
         </Container>
-    )
+    )} else { return <></>}
 }
 
-export default Map
+export default scriptLoader([`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&libraries=places`])(Map)

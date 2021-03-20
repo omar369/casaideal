@@ -1,11 +1,21 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
-    root: {
+    mainAppBarCnt: {
       flexGrow: 1,
+      backgroundColor: '#766092'
     },
     menuButton: {
       marginRight: '2%',
+    },
+    loginBtn: {
+      backgroundColor: '#796092',
+      color: 'white',
+      marginRight: 25
+    },
+    logoutBtn: {
+      backgroundColor: '#796092',
+      color: 'white'
     },
     title: {
       flexGrow: 1,
@@ -22,8 +32,8 @@ export default makeStyles(() => ({
       textAlign: 'left'
     },
     avatar: {
-      color: 'rgb(120,50,125)',
-      backgroundColor: 'white',
+      color: 'white',
+      backgroundColor: '#a9d',
       width: '6%',
       height: '6%',
       alignSelf: 'center'

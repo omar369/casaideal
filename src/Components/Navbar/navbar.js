@@ -7,6 +7,7 @@ import { Typography, AppBar, Toolbar, Button, Avatar } from '@material-ui/core';
 import useStyles from './styles';
 
 import SimpleMenu from './MenuIcon/menuIcon.js';
+import styles from './styles';
 
 const Navbar = ()=>{
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -36,7 +37,7 @@ const Navbar = ()=>{
   }, [location]);
 
   return(
-      <AppBar position="fixed">
+      <AppBar position="fixed" className={classes.mainAppBarCnt}>
       <Toolbar>
           <SimpleMenu />
         <Typography variant="subtitle1" className={classes.title}>
@@ -46,10 +47,10 @@ const Navbar = ()=>{
           <div className={classes.profile}>
             <Avatar className={classes.avatar} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
             <Typography className={classes.userName} >{user?.result.name}</Typography>
-            <Button variant="contained" color="secondary" onClick={logout}>Logout</Button>
+            <Button variant="contained" className={classes.logoutBtn} onClick={logout}>Logout</Button>
           </div>
         ) : (
-          <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+          <Button component={Link} to="/auth" variant="contained" className={classes.loginBtn}>Sign In</Button>
         )}
       </Toolbar>
     </AppBar>

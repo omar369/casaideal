@@ -141,7 +141,7 @@ const CrearAnuncio = ({ currentId, setCurrentId}) => {
     return (
       <Paper className={classes.paper}>
         <Typography variant="h6" align="center">
-          Please Sign In to create your own memories and like other's memories.
+          Lo sentimos no podemos mostrar esta página debido a que no cuenta con permisos de administrador.
         </Typography>
       </Paper>
     );

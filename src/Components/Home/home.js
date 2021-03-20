@@ -20,7 +20,7 @@ const Home = ()=>{
                     <Typography variant="body1">Haz click para buscar propiedades disponibles:</Typography>
                     </Grid>
                     <Grid item container xs={12} md={12} justify="flex-end">
-                        <Button component={Link} to="/anuncios" variant="outlined" color="secondary">
+                        <Button component={Link} to="/anuncios" variant="outlined" className={classes.anunciosBtn}>
                         Ver anuncios
                         </Button>
                     </Grid>
