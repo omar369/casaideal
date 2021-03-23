@@ -191,15 +191,15 @@ const AnuncioFull = ()=>{
                         </Grid>
 
                         <Container style={{padding: '3%'}}>
+                          
                             <GoogleMap 
-                                mapContainerStyle={mapContainerStyle}
-                                zoom={10} 
-                                center={anuncio.latlng}
-                                options={options}>
-
-                                    <Marker position={{ lat: anuncio.latlng.lat, lng: anuncio.latlng.lng }} />
-
+                            mapContainerStyle={mapContainerStyle}
+                            zoom={10} 
+                            center={anuncio.latlng}
+                            options={options}>
+                                <Marker position={{ lat: anuncio.latlng.lat, lng: anuncio.latlng.lng }} />
                             </GoogleMap>
+
                         </Container>
 
                         <Grid item container xs={12} md={12}>
@@ -219,4 +219,4 @@ const AnuncioFull = ()=>{
     )
 }
 
-export default AnuncioFull;
+export default AnuncioFull

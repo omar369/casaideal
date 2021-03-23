@@ -9,9 +9,9 @@ const mapContainerStyle = {width: '75vw', height: '45vh'}
 const center = { lat: 20.695595, lng: -100.445277}
 const options = {styles: stylesMap, disableDefaultUI: false}
 
-const Map = ({marker, setMarker, isScriptLoaded, isScriptLoadSucceed})=>{
+const Map = ({marker, setMarker})=>{
 
-    if(isScriptLoaded && isScriptLoadSucceed){
+   
     return(
         <Container style={{padding: '3%'}}>
             <GoogleMap 
@@ -27,7 +27,7 @@ const Map = ({marker, setMarker, isScriptLoaded, isScriptLoadSucceed})=>{
 
             </GoogleMap>
         </Container>
-    )} else { return <></>}
+    )
 }
 
-export default scriptLoader([`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}&libraries=places`])(Map)
+export default Map
