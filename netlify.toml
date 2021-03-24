@@ -1,3 +1,10 @@
+[build]
+    publish = "build"
+
 [[redirects]]
     from = "/*"
     to = "index.html"
+    status = 200
+
+[context.deploy-preview.environment]
+  REACT_APP_GOOGLE_MAPS_KEY = "AIzaSyCFebwf3HXsO9s_R3GXQaM5vS0QhvxX-HI"
