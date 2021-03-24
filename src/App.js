@@ -19,12 +19,12 @@ function App() {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
 
-  useEffect(async() => {
-    await dispatch(getAnuncios());
+  useEffect(() => {
+    dispatch(getAnuncios());
 
     const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_KEY
     const script = document.createElement('script')
-    script.src = await `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`
     document.head.append(script)
 
   }, [currentId, dispatch]);
