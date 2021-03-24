@@ -33,7 +33,7 @@ export default makeStyles(() => ({
     },
     avatar: {
       color: 'white',
-      backgroundColor: '#a9d',
+      backgroundColor: '#39d',
       width: '6%',
       height: '6%',
       alignSelf: 'center'
