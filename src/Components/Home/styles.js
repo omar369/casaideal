@@ -9,12 +9,12 @@ export default makeStyles(() => ({
         margin: '2%',
         marginTop: '20%',
         padding: '5%',
-        color: '#39d',
+        color: '#629',
         borderRadius: 10,
     },
     anunciosBtn: {
-        borderColor: '#39d',
+        borderColor: '#629',
         borderWidth: 2,
-        color: '#39d'
+        color: '#629'
     }
   }));

@@ -3,18 +3,18 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(() => ({
     mainAppBarCnt: {
       flexGrow: 1,
-      backgroundColor: '#766092'
+      backgroundColor: '#629'
     },
     menuButton: {
       marginRight: '2%',
     },
     loginBtn: {
-      backgroundColor: '#796092',
+      backgroundColor: '#3a9',
       color: 'white',
       marginRight: 25
     },
     logoutBtn: {
-      backgroundColor: '#796092',
+      backgroundColor: '#3a9',
       color: 'white'
     },
     title: {
@@ -33,7 +33,7 @@ export default makeStyles(() => ({
     },
     avatar: {
       color: 'white',
-      backgroundColor: '#39d',
+      backgroundColor: '#3a9',
       width: '6%',
       height: '6%',
       alignSelf: 'center'
